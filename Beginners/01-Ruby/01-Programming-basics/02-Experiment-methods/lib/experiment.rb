@@ -23,16 +23,15 @@ def is_divisible_by_two(an_integer)
 end
 
 def random_subset(an_array, sample_size)
-  # TODO: return a random subset of an_array with size sample_size
-  # example: random_subset(('a'..'z').to_a, 4) => ["u", "q", "l", "t"]
+  an_array.shuffle.sample(sample_size)
 end
 
 def randomize(an_array)
-  # TODO: return a randomized copy of an_array
-  # example: randomize([1, 2, 3, 4]) => [2, 1, 4, 3]
+  an_array.shuffle
 end
 
 def ascending_order(an_array)
   # TODO: return a copy of an_array with elements in ascending order
   # example: ascending_order([7, 3, 1, 6, 9]) => [1, 3, 6, 7, 9]
+  an_array.sort
 end
