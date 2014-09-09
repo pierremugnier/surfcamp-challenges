@@ -3,7 +3,7 @@
 # - Just look in the doc for the right method of the String, Fixnum, and Array classes !
 
 def get_rid_of_surrounding_whitespaces(a_string)
-  a_string.delete(" ")
+  a_string.strip
 end
 
 def belongs_to?(a_string, a_word)
@@ -15,7 +15,7 @@ def replace(initial_string, old_letter, new_letter)
 end
 
 def exactly_divide(an_integer, a_divider)
-  an_integer/a_divider
+  an_integer.to_f/a_divider
 end
 
 def is_divisible_by_two(an_integer)
