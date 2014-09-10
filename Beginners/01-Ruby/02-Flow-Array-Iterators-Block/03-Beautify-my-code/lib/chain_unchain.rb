@@ -21,28 +21,4 @@ def quote_prime_numbers(n)
   prime.map{ |prime_num| "#{prime_num} is prime"}
 end
 
-p quote_prime_numbers(30)
-
-class Person
-  def initialize(name, age)
-    @name = name
-    @age = age
-  end
-  def print_name
-    puts @name
-  end
-  def grow
-    @age += 1
-  end
-  def get_ill
-    @status = "ill"
-  end
-end
-
-boris = Person.new("boris", 12)
-p boris
-boris.grow
-p boris
-boris.get_ill
-p boris
 
