@@ -2,8 +2,10 @@ require 'open-uri'
 require 'json'
 
 def generate_grid(grid_size)
-  #TODO: generate random grid of letters
-  ('A'..'Z').to_a.shuffle.take(grid_size)
+  letters = (1..grid_size).to_a
+  letters.map do |letter|
+      letter = ('A'..'Z').to_a.sample
+  end
 end
 
 def run_game(attempt, grid, start_time, end_time)
@@ -39,7 +41,7 @@ def run_game(attempt, grid, start_time, end_time)
     message: "well done!",
     translation: trad,
     time: end_time - start_time,
-    score:  attempt.size
+    score:  (attempt.size / (end_time - start_time) + 10).round
     }
   else
     trad = translate(attempt)["term0"]["PrincipalTranslations"]["0"]["FirstTranslation"]["term"]
